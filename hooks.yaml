@@ -1,0 +1,26 @@
+-   id: go-fmt
+    name: 'go fmt'
+    entry: run-go-fmt.sh
+    files: '\.go$'
+    language: 'script'
+-   id: go-vet
+    name: 'go vet'
+    entry: run-go-vet.sh
+    files: '\.go$'
+    language: 'script'
+-   id: go-lint
+    name: 'go lint'
+    entry: run-go-lint.sh
+    files: '\.go$'
+    language: 'script'
+-   id: validate-toml
+    name: 'validate toml'
+    entry: 'tomlv'
+    files: '\.toml$'
+    language: 'system'
+-   id: 'no-go-testing'
+    name: "Check files aren't using gos' testing package"
+    entry: 'testing\.T'
+    files: 'test_\.go$'
+    language: 'pcre'
+# TODO: validate-pkg
