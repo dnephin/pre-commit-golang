@@ -21,7 +21,7 @@ Add this to your `.pre-commit-config.yaml`
 
 - `go-fmt` - Runs `gofmt`, requires golang
 - `go-vet` - Runs `go vet`, requires golang
-- `go-lint` - Runs `goling`, requires https://github.com/golang/lint
+- `go-lint` - Runs `golint`, requires https://github.com/golang/lint
 - `validate-toml` - Runs `tomlv`, requires
    https://github.com/BurntSushi/toml/tree/master/cmd/tomlv
 - `no-go-testing` - Checks that no files are using `testing.T`, if you want

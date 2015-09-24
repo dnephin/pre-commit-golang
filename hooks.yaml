@@ -3,24 +3,29 @@
     entry: run-go-fmt.sh
     files: '\.go$'
     language: 'script'
+    description: "Runs `gofmt`, requires golang"
 -   id: go-vet
     name: 'go vet'
     entry: run-go-vet.sh
     files: '\.go$'
     language: 'script'
+    description: "Runs `go vet`, requires golang"
 -   id: go-lint
     name: 'go lint'
     entry: run-go-lint.sh
     files: '\.go$'
     language: 'script'
+    description: "Runs `golint`, requires https://github.com/golang/lint"
 -   id: validate-toml
     name: 'validate toml'
     entry: 'tomlv'
     files: '\.toml$'
     language: 'system'
+    description: "Runs `tomlv`, requires https://github.com/BurntSushi/toml/tree/master/cmd/tomlv"
 -   id: 'no-go-testing'
     name: "Check files aren't using gos' testing package"
     entry: 'testing\.T'
     files: 'test_\.go$'
     language: 'pcre'
+    description: "Checks that no files are using `testing.T`, if you want developers to use a different testing framework"
 # TODO: validate-pkg
