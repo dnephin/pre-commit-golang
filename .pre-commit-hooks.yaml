@@ -21,11 +21,19 @@
     entry: 'tomlv'
     files: '\.toml$'
     language: 'system'
-    description: "Runs `tomlv`, requires https://github.com/BurntSushi/toml/tree/master/cmd/tomlv"
+    description: >
+      Runs `tomlv`, requires https://github.com/BurntSushi/toml/tree/master/cmd/tomlv"
 -   id: 'no-go-testing'
     name: "Check files aren't using gos' testing package"
     entry: 'testing\.T'
     files: 'test_\.go$'
     language: 'pcre'
-    description: "Checks that no files are using `testing.T`, if you want developers to use a different testing framework"
-# TODO: validate-pkg
+    description: >
+      Checks that no files are using `testing.T`, if you want developers to use
+      a different testing framework
+-   id: gometalinter
+    name: 'gometalinter'
+    entry: run-gometalinter.sh
+    files: '\.go$'
+    language: 'script'
+    description: ""
