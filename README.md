@@ -16,6 +16,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-lint
         - id: validate-toml
         - id: no-go-testing
+        - id: gometalinter
 
 ### Available hooks
 
@@ -26,3 +27,4 @@ Add this to your `.pre-commit-config.yaml`
    https://github.com/BurntSushi/toml/tree/master/cmd/tomlv
 - `no-go-testing` - Checks that no files are using `testing.T`, if you want
   developers to use a different testing framework
+- `gometalinter` - run `gometalinter --config gometalinter.json ./...`
