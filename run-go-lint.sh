@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Capture and print stdout/stderr, since golint doesn't use proper exit codes
 #
