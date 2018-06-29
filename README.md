@@ -17,6 +17,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: validate-toml
         - id: no-go-testing
         - id: gometalinter
+        - id: golangci-lint
 
 ### Available hooks
 
@@ -28,3 +29,5 @@ Add this to your `.pre-commit-config.yaml`
 - `no-go-testing` - Checks that no files are using `testing.T`, if you want
   developers to use a different testing framework
 - `gometalinter` - run `gometalinter --config gometalinter.json ./...`
+- `golangci-lint` - run `golangci-lint run ./...`, requires
+  [golangci-lint](https://github.com/golangci/golangci-lint)
