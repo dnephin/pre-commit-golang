@@ -24,7 +24,7 @@
     description: >
       Runs `tomlv`, requires https://github.com/BurntSushi/toml/tree/master/cmd/tomlv"
 -   id: 'no-go-testing'
-    name: "Check files aren't using gos' testing package"
+    name: "Check files aren't using go's testing package"
     entry: 'testing\.T'
     files: 'test_.*\.go$'
     language: 'pygrep'
