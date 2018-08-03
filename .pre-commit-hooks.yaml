@@ -43,3 +43,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `golangci-lint`, requires https://github.com/golangci/golangci-lint"
+-   id: go-critic
+    name: 'go-critic'
+    entry: run-go-critic.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go-critic`, requires https://github.com/go-critic/go-critic"

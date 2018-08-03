@@ -31,3 +31,4 @@ Add this to your `.pre-commit-config.yaml`
 - `gometalinter` - run `gometalinter --config gometalinter.json ./...`
 - `golangci-lint` - run `golangci-lint run ./...`, requires
   [golangci-lint](https://github.com/golangci/golangci-lint)
+- `go-critic` - run `gocritic check-project .`, requires [go-critic](https://github.com/go-critic/go-critic)
