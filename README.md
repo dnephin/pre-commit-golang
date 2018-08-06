@@ -18,6 +18,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: no-go-testing
         - id: gometalinter
         - id: golangci-lint
+        - id: go-critic
 
 ### Available hooks
 
