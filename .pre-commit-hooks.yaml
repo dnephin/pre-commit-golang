@@ -49,3 +49,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go-critic`, requires https://github.com/go-critic/go-critic"
+-   id: go-unit-tests
+    name: 'go-unit-tests'
+    entry: run-go-unit-tests.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go test`"
