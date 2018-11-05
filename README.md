@@ -20,6 +20,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: golangci-lint
         - id: go-critic
         - id: go-unit-tests
+        - id: go-build
 
 ### Available hooks
 
@@ -35,3 +36,4 @@ Add this to your `.pre-commit-config.yaml`
   [golangci-lint](https://github.com/golangci/golangci-lint)
 - `go-critic` - run `gocritic check-project .`, requires [go-critic](https://github.com/go-critic/go-critic)
 - `go-unit-tests` - run `go test -tags=unit -timeout 30s -short -v`
+- `go-build` - Runs `go build`, requires golang
