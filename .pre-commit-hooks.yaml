@@ -60,4 +60,8 @@
     entry: run-go-build.sh
     files: '\.go$'
     language: 'script'
-    description: "Runs `go build`, requires golang"    
+    description: "Runs `go build`, requires golang"
+-   id: exec-command
+    name: 'exec-command'
+    entry: run-command.sh
+    language: 'script'
