@@ -65,3 +65,4 @@
     name: 'exec-command'
     entry: run-command.sh
     language: 'script'
+    description: "It can run any command pass in args."
