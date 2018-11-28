@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-exec $1
+make $1
