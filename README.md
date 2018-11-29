@@ -21,6 +21,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-critic
         - id: go-unit-tests
         - id: go-build
+        - id: go-coverage-badge
 
 ### Available hooks
 
@@ -37,3 +38,4 @@ Add this to your `.pre-commit-config.yaml`
 - `go-critic` - run `gocritic check-project .`, requires [go-critic](https://github.com/go-critic/go-critic)
 - `go-unit-tests` - run `go test -tags=unit -timeout 30s -short -v`
 - `go-build` - run `go build`, requires golang
+- `go-build` - run `gopherbadger`, requires https://github.com/jpoles1/gopherbadger

@@ -61,3 +61,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go build`, requires golang"    
+-   id: go-coverage-badge
+    name: 'go-coverage-badge'
+    entry: run-go-coverage-badge.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `gopherbadger`, requires https://github.com/jpoles1/gopherbadger"
