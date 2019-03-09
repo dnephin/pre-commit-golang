@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
-for file in "$@"; do
-    go vet $file
+pkg=$(go list)
+for dir in $(echo $@|xargs -n1 dirname|sort -u); do
+  go vet $pkg/$dir
 done
