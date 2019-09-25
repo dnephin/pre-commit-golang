@@ -4,6 +4,12 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `gofmt`, requires golang"
+-   id: go-imports
+    name: 'go imports'
+    entry: run-go-imports.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `goimports`, requires golang"
 -   id: go-vet
     name: 'go vet'
     entry: run-go-vet.sh
