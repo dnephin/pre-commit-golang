@@ -22,6 +22,13 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `golint`, requires https://github.com/golang/lint"
+-   id: go-cyclo
+    name: 'go-cyclo'
+    entry: run-go-cyclo.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `gocyclo`, requires https://github.com/fzipp/gocyclo"
+    args: [-over=15]
 -   id: validate-toml
     name: 'validate toml'
     entry: 'tomlv'
@@ -67,4 +74,4 @@
     entry: run-go-build.sh
     files: '\.go$'
     language: 'script'
-    description: "Runs `go build`, requires golang"    
+    description: "Runs `go build`, requires golang"
