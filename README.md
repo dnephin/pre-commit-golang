@@ -14,6 +14,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-fmt
         - id: go-vet
         - id: go-lint
+        - id: go-imports
         - id: validate-toml
         - id: no-go-testing
         - id: gometalinter
@@ -27,6 +28,7 @@ Add this to your `.pre-commit-config.yaml`
 - `go-fmt` - Runs `gofmt`, requires golang
 - `go-vet` - Runs `go vet`, requires golang
 - `go-lint` - Runs `golint`, requires https://github.com/golang/lint
+- `go-imports` - Runs `goimports`, requires golang.org/x/tools/cmd/goimports
 - `validate-toml` - Runs `tomlv`, requires
    https://github.com/BurntSushi/toml/tree/master/cmd/tomlv
 - `no-go-testing` - Checks that no files are using `testing.T`, if you want
