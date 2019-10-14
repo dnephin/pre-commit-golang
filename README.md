@@ -15,6 +15,8 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-vet
         - id: go-lint
         - id: go-imports
+        - id: go-cyclo
+          args: [-over=15]
         - id: validate-toml
         - id: no-go-testing
         - id: gometalinter
@@ -29,6 +31,7 @@ Add this to your `.pre-commit-config.yaml`
 - `go-vet` - Runs `go vet`, requires golang
 - `go-lint` - Runs `golint`, requires https://github.com/golang/lint
 - `go-imports` - Runs `goimports`, requires golang.org/x/tools/cmd/goimports
+- `go-cyclo` - Runs `gocyclo`, require https://github.com/fzipp/gocyclo
 - `validate-toml` - Runs `tomlv`, requires
    https://github.com/BurntSushi/toml/tree/master/cmd/tomlv
 - `no-go-testing` - Checks that no files are using `testing.T`, if you want
