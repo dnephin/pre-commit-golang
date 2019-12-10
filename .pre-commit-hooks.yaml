@@ -75,3 +75,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go build`, requires golang"
+-   id: go-mod-tidy
+    name: 'go-mod-tidy'
+    entry: run-go-mod-tidy.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go mod tidy -v`, requires golang"

@@ -24,6 +24,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-critic
         - id: go-unit-tests
         - id: go-build
+        - id: go-mod-tidy
 
 ### Available hooks
 
@@ -42,3 +43,4 @@ Add this to your `.pre-commit-config.yaml`
 - `go-critic` - run `gocritic check ./...`, requires [go-critic](https://github.com/go-critic/go-critic)
 - `go-unit-tests` - run `go test -tags=unit -timeout 30s -short -v`
 - `go-build` - run `go build`, requires golang
+- `go-mod-tidy` - run `go mod tidy -v`, requires golang
