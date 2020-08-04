@@ -81,3 +81,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go mod tidy -v`, requires golang"
+-   id: go-mod-vendor
+    name: 'go-mod-vendor'
+    entry: run-go-mod-vendor.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go mod vendor`, requires golang"
