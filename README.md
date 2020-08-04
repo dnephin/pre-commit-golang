@@ -44,3 +44,4 @@ Add this to your `.pre-commit-config.yaml`
 - `go-unit-tests` - run `go test -tags=unit -timeout 30s -short -v`
 - `go-build` - run `go build`, requires golang
 - `go-mod-tidy` - run `go mod tidy -v`, requires golang
+- `go-mod-vendor` - run `go mod vendor`, requires golang
