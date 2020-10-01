@@ -87,10 +87,3 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go mod vendor`, requires golang"
--   id: test-bash
-    name: 'test-bash'
-    description: "Tests bash"
-    entry: run-test-bash.sh
-    always_run: true
-    language: 'script'
-
