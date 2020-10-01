@@ -4,6 +4,5 @@
 #
 set -e
 
-exec 5>&1
-output="$(goimports -l -w "$@" | tee /dev/fd/5)"
+output="$(goimports -l -w "$@")"
 [[ -z "$output" ]]
