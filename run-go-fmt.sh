@@ -6,4 +6,4 @@ set -e
 
 output="$(gofmt -l -w "$@")"
 [[ -z "$output" ]] && exit 0
-echo >&2 "files formatted, please re-add to commit"
+echo "files formatted, please re-add to commit"

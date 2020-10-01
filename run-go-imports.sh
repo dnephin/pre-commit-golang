@@ -6,4 +6,4 @@ set -e
 
 output="$(goimports -l -w "$@")"
 [[ -z "$output" ]] && exit 0
-echo >&2 "imports changed, please re-add to commit"
+echo "imports changed, please re-add to commit"
