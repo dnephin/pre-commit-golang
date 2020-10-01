@@ -78,7 +78,7 @@
 -   id: go-mod-tidy
     name: 'go-mod-tidy'
     entry: run-go-mod-tidy.sh
-    files: '\.(go|sum|mod)$'
+    files: '\.go$'
     language: 'script'
     description: "Runs `go mod tidy -v`, requires golang"
 -   id: go-mod-vendor
