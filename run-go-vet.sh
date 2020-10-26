@@ -3,5 +3,5 @@
 set -e
 pkg=$(go list)
 for fn in "$@"; do
-        go vet "${pkg}/${fn}"
+  go vet "${pkg}/${fn}"
 done
