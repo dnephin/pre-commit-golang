@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-remotebanch = "origin/$branch"
+remotebanch="origin/$branch"
 
-echo "$remotebanch"
+echo "Checking changes in $remotebanch"
 FILES=$(git diff --stat --cached $remotebanch)
 
 # loop againts files
