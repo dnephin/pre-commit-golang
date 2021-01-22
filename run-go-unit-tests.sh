@@ -8,7 +8,10 @@ FILES=$(git diff --stat --cached $remotebanch)
 # loop againts files
 for FILE in $FILES
 do
-    echo "$FILE"
+  case $FILE in
+    (*.go)  # ! == does not match
+        echo "$FILE"
+  esac
 done
 
 returncode=$?
