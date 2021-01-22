@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
-go test -v -coverprofile=c.out `go list ./...`
+branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+remotebanch = "origin/$branch"
+
+FILES=$(git diff --stat --cached $remotebanch)
+
+# loop againts files
+for FILE in $FILES
+do
+    echo "$FILE"
+done
 
 returncode=$?
 if [ $returncode -ne 0 ]; then
