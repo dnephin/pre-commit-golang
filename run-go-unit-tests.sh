@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 remotebanch = "origin/$branch"
 
 echo "$remotebanch"
