@@ -2,7 +2,7 @@
 #
 # Capture and print stdout, since goimports doesn't use proper exit codes
 #
-set -e
+set -e -o pipefail
 
 exec 5>&1
 output="$(goimports -l -w "$@" | tee /dev/fd/5)"
