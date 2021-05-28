@@ -9,7 +9,7 @@ golang hooks for http://pre-commit.com/
 Add this to your `.pre-commit-config.yaml`
 
     - repo: git://github.com/dnephin/pre-commit-golang
-      rev: master
+      rev: <VERSION> # Get the latest from: https://github.com/dnephin/pre-commit-golang/releases
       hooks:
         - id: go-fmt
         - id: go-vet
