@@ -4,6 +4,6 @@
 #
 set -e -o pipefail
 
-exec 5>&1
-output="$(goimports -l -w "$@" | tee /dev/fd/5)"
-[[ -z "$output" ]]
+output="$(goimports -l -w "$@")"
+[[ -z "$output" ]] && exit 0
+echo "imports changed, please re-add to commit"
