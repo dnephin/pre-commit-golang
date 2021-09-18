@@ -75,6 +75,12 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go build`, requires golang"
+-   id: go-generate
+    name: 'go-generate'
+    entry: run-go-generate.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go generate`, requires golang"
 -   id: go-mod-tidy
     name: 'go-mod-tidy'
     entry: run-go-mod-tidy.sh
