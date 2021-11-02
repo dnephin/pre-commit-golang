@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
-FILES=$(go list ./...  | grep -v /vendor/)
+branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+remotebanch="origin/$branch"
 
-go test -tags=unit -timeout 30s -short -v ${FILES}
+echo "Checking changes in $remotebanch"
+FILES=$(git diff --stat --cached $remotebanch)
 
-returncode=$?
-if [ $returncode -ne 0 ]; then
-  echo "unit tests failed"
-  exit 1
-fi
+# loop againts files
+for FILE in $FILES
+do
+  case $FILE in
+    (*.go)  # ! == does not match
+        echo "$FILE"
+  esac
+done
