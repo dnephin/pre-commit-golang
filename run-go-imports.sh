@@ -4,6 +4,22 @@
 #
 set -e -o pipefail
 
+while getopts ":w:" opt; do
+  case $opt in
+    a)
+      cd $OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
 exec 5>&1
 output="$(goimports -l -w "$@" | tee /dev/fd/5)"
 [[ -z "$output" ]]
