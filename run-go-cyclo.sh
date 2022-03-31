@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eu -o pipefail
+
 if ! command -v gocyclo &> /dev/null ; then
     echo "gocyclo not installed or available in the PATH" >&2
     echo "please check https://github.com/fzipp/gocyclo" >&2
