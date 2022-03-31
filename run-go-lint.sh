@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if command -v golint &> /dev/null ; then
+    echo "golint not installed or available in the PATH" >&2
+    echo "please check https://github.com/golang/lint" >&2
+    exit 1
+fi
+
 failed=false
 
 for file in "$@"; do
