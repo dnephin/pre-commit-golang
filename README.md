@@ -29,7 +29,7 @@ Add this to your `.pre-commit-config.yaml`
 
 - `go-fmt` - Runs `gofmt`, requires golang
 - `go-vet` - Runs `go vet`, requires golang
-- `go-lint` - Runs `golint`, requires https://github.com/golang/lint
+- `go-lint` - Runs `golint`, requires https://github.com/golang/lint but is unmaintained & deprecated in favour of [`golangci-lint`](https://github.com/golangci/golangci-lint)
 - `go-imports` - Runs `goimports`, requires golang.org/x/tools/cmd/goimports
 - `go-cyclo` - Runs `gocyclo`, require https://github.com/fzipp/gocyclo
 - `validate-toml` - Runs `tomlv`, requires
