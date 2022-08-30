@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
-exec go generate "$@"
+
+set -eu -o pipefail
+
+echo "$@" | xargs -n1 go generate
