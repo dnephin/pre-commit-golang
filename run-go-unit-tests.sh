@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 FILES=$(go list ./...  | grep -v /vendor/)
 
-go test -tags=unit -timeout 30s -short -v ${FILES}
+ARGS=""
+
+for arg in "$@"; do
+  [[ $arg == -* ]] && ARGS="${ARGS} $arg"
+done
+
+[ -z "$ARGS" ] && ARGS="-timeout=30s"
+
+go test -tags=unit ${ARGS} -short -v ${FILES}
 
 returncode=$?
 if [ $returncode -ne 0 ]; then
