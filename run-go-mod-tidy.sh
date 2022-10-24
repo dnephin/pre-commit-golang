@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
-if go mod tidy -v 2>&1 | grep -q 'updates to go.mod needed'; then
-    exit 1
+go mod tidy -v $@
+if [ $? -ne 0 ]; then
+  exit 2
 fi
 
 git diff --exit-code go.* &> /dev/null
-
-if [ $? -eq 1 ]; then
+if [ $? -ne 0 ]; then
     echo "go.mod or go.sum differs, please re-add it to your commit"
-
-    exit 1
+    exit 3
 fi
