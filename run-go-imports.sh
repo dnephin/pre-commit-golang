@@ -10,6 +10,6 @@ if ! command -v goimports &> /dev/null ; then
     exit 1
 fi
 
-exec 5>&1
-output="$(goimports -l -w "$@" | tee /dev/fd/5)"
+output="$(goimports -l -w "$@")"
+echo "$output"
 [[ -z "$output" ]]
