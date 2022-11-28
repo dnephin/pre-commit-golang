@@ -57,6 +57,12 @@
     language: 'script'
     pass_filenames: false
     description: "Runs `golangci-lint`, requires https://github.com/golangci/golangci-lint"
+-   id: staticcheck
+    name: 'staticcheck'
+    entry: run-static-check.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `staticcheck`, requires https://honnef.co/go/tools/cmd/staticcheck"
 -   id: go-critic
     name: 'go-critic'
     entry: run-go-critic.sh
