@@ -12,7 +12,7 @@
     description: "Runs `goimports`, requires golang"
 -   id: go-vet
     name: 'go vet'
-    entry: run-go-vet.sh
+    entry: run-go-vet.py
     files: '\.go$'
     language: 'script'
     description: "Runs `go vet`, requires golang"
