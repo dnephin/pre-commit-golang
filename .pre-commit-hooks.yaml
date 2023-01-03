@@ -84,6 +84,7 @@
 -   id: go-mod-tidy
     name: 'go-mod-tidy'
     entry: run-go-mod-tidy.sh
+    always_run: true
     pass_filenames: false
     language: 'script'
     description: "Runs `go mod tidy -v`, requires golang"
