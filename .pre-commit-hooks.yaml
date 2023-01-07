@@ -12,7 +12,7 @@
     description: "Runs `goimports`, requires golang"
 -   id: go-vet
     name: 'go vet'
-    entry: run-go-vet.sh
+    entry: run-go-vet.py
     files: '\.go$'
     language: 'script'
     description: "Runs `go vet`, requires golang"
@@ -83,7 +83,7 @@
     description: "Runs `go generate`, requires golang"
 -   id: go-mod-tidy
     name: 'go-mod-tidy'
-    entry: run-go-mod-tidy.sh
+    entry: run-go-mod-tidy.py
     pass_filenames: false
     language: 'script'
     description: "Runs `go mod tidy -v`, requires golang"
