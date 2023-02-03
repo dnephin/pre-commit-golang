@@ -48,3 +48,4 @@ Add this to your `.pre-commit-config.yaml`
 - `go-build` - run `go build`, requires golang
 - `go-mod-tidy` - run `go mod tidy -v`, requires golang
 - `go-mod-vendor` - run `go mod vendor`, requires golang
+- `tokolint` - run `tokolint`, requires [tokolint](https://github.com/tokopedia/tokolint)
