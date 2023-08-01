@@ -13,7 +13,7 @@ failed=false
 
 for file in "$@"; do
     # redirect stderr so that violations and summaries are properly interleaved.
-    if ! $BIN -set_exit_status "$file" 2>&1
+    if ! $BIN "$file" 2>&1
     then
         failed=true
     fi
