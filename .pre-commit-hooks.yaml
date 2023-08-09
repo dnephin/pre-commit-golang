@@ -93,3 +93,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go mod vendor`, requires golang"
+-   id: go-ineffassign
+    name: 'go ineffassign'
+    entry: run-go-ineffassign.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `ineffassign`, requires ineffassign"
